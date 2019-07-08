@@ -35,6 +35,17 @@ Grey dark 3: #999
   --line:1px solid var(--color-Grey-light-2);
 }
 
+$bp-med1: 65.625em;
+$bp-med2: 53.125em;
+$bp-sma1: 41.875em;
+$bp-sma2: 31.25em;
+$bp-mob1: 26.5625em;
+
+
+
+
+
+
 *,
 *::before,
 *::after {
@@ -45,6 +56,14 @@ Grey dark 3: #999
 
 html {
   font-size: 62.5%; // 1rem = 10px
+  
+  @media only screen and (max-width: $bp-med1){
+    font-size: 50%;
+  }
+  
+  @media only screen and (max-width: $bp-mob1){
+    font-size: 45%;
+  }
 }
 
 body {

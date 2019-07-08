@@ -1,51 +1,84 @@
-.container{
-    display: flex;
-    flex-wrap: wrap; 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 140rem;
+  margin: auto;
 
-    .header{
-        font-size: 1.4rem;
-        background-color: #fff;
-        height: 7rem;
-        border-bottom: var(--line);
-        flex:100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;     
-    }
-    
-    .sidebar{
-        flex: 0 0 18%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: var(--color-Grey-dark-1);
-    }
-    
-    .hotel-view{
-        flex: 1;
-    } 
-}
+  @media only screen and (max-width: $bp-med2) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 
-.detail{
+  .header {
     font-size: 1.4rem;
-    display: flex;
-    background-color: var(--color-Grey-light-1);
-    padding: 4.25rem;
-    border-bottom: var(--line);
-}
-
-.description{
     background-color: #fff;
-    padding: 3rem;
-    flex: 0 0 60%;
-    margin-right: 4.25rem;
-    box-shadow: var(--shadow-light);
-}
+    min-height: 7rem;
+    border-bottom: var(--line);
+    flex: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.user-reviews{
-    flex: 1;
+    @media only screen and (max-width: $bp-sma2) {
+        min-height: 11rem;
+    }
     
+    @media only screen and (max-width: $bp-sma2) {
+        flex-wrap: wrap;
+      }
+  }
+
+  .sidebar {
+    flex: 0 0 18%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-Grey-dark-1);
+  }
+
+  .hotel-view {
+    flex: 1;
+  }
+}
+
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  background-color: var(--color-Grey-light-1);
+  padding: 4.25rem;
+  border-bottom: var(--line);
+
+  @media only screen and (max-width: $bp-med2) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-sma1) {
+    flex-direction: column;
+  }
+}
+
+.description {
+  background-color: #fff;
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.25rem;
+  box-shadow: var(--shadow-light);
+
+  @media only screen and (max-width: $bp-med2) {
+    margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-sma1) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
 }
